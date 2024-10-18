@@ -1,0 +1,61 @@
+.experience {
+  padding: 2rem 0;
+}
+
+.timeline {
+  position: relative;
+  margin: 30px auto;
+  padding: 0 20%; 
+  list-style: none;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 40px 0; /* Увеличиваем отступы */
+  padding-left: 70px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-year {
+  position: absolute;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px; /* Увеличиваем размер шрифта */
+  transition: background-color 0.3s;
+}
+
+.timeline-year:hover {
+  background-color: #0056b3;
+}
+
+.timeline-content {
+  background-color: #f4f4f4;
+  padding: 15px; /* Увеличиваем отступы */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px; /* Расположение линии */
+  top: 30px; /* Отступ сверху */
+  width: 2px; /* Ширина линии */
+  height: 100%; /* Высота линии */
+  background-color: #007BFF; /* Цвет линии */
+  z-index: -1; /* Чтобы линия была позади */
+}

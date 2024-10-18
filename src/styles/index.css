@@ -1,0 +1,256 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Основной шрифт для текста */
+  color: #333; /* Цвет текста */
+}
+.header {
+  display: flex; /* Используем Flexbox */
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: center; /* Центрируем заголовок */
+  position: relative; /* Позволяет разместить кнопку справа */
+  margin-bottom: 20px; /* Уменьши отступ снизу */
+}
+
+.email {
+  color: #bbb; /* Цвет ссылок в меню */
+  margin-left: 20px; /* Отступ слева для адреса электронной почты */
+}
+.email-icon {
+  margin-right: 10px; /* Настрой этот отступ по необходимости */
+}
+.email a {
+  color:  #bbb; 
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+h1 { 
+  font-size: 3rem; /* Размер шрифта для заголовка */
+  margin-bottom: 1rem;
+}
+h2 {
+  text-align: center; /* Центрируем текст */
+  margin-bottom: 50px; /* Отступ снизу для всех h2 */
+}
+a {
+  text-decoration: none; /* Убираем подчеркивание */
+
+}
+
+.skills {
+  padding-top: 50px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 50px 0;
+}
+
+.skill-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.skill-box.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-box h5 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.skill-box i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.skill-box:nth-child(odd) {
+  background-color: #e7f3fe;
+}
+
+.skill-box:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  background-color: #e0f7fa;
+}
+
+/* Навигация */
+.navbar {
+  padding: 1rem; /* Увеличиваем отступы внутри навбара */
+}
+
+.navbar-brand {
+  font-weight: bold; /* Увеличиваем жирность текста для заголовка */
+}
+
+.nav-link {
+  margin-left: 15px; /* Добавляем отступы между ссылками */
+  transition: color 0.3s; /* Плавный переход цвета при наведении */
+    margin-left: 15px; /* Добавляем отступы между ссылками */
+    cursor: pointer; /* Меняем курсор на указатель */
+    color: #bbb; /* Цвет ссылок в меню */
+  
+}
+
+.nav-link:hover {
+  color: #ffffff; /* Изменяем цвет текста при наведении */
+}
+
+/* Домашняя страница */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Занимаем всю высоту экрана */
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Градиентный фон */
+  color: white;
+  text-align: center;
+}
+
+.home-content {
+  max-width: 600px; /* Максимальная ширина для текста */
+}
+
+
+
+.home p {
+  font-size: 1.25rem; /* Размер шрифта для описания */
+  margin-bottom: 2rem;
+}
+.home .home-btn {
+  margin-top: 10px;
+}
+.btn {
+  padding: 10px 20px; /* Увеличиваем отступы кнопки */
+  font-size: 1rem;
+  border-radius: 5px; /* Скругляем углы кнопки */
+    padding: 10px 20px; /* Отступы кнопки */
+    font-size: 1rem; /* Размер шрифта */
+    border-radius: 5px; /* Скругленные углы */
+    background-color: #007BFF; /* Фоновый цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Без границы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s, transform 0.3s; /* Плавные переходы */
+    margin-left: 20px; /* Отступ слева от кнопки */
+    margin-top: -45px; /* Уменьши отступ сверху, чтобы поднять кнопку */
+  }
+  .btn:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+    transform: scale(1.05); /* Увеличиваем при наведении */
+    color: white; /* Убедитесь, что цвет текста остается белым */
+  }
+  
+
+
+
+
+
+
+/* ПРОЕКТЫ */
+
+.projects {
+  padding: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрируем карточки */
+  gap: 20px; /* Пробел между элементами */
+}
+
+.project-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Чтобы занимала всю ширину контейнера, но не больше max-width */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+
+  
+  margin: 0 auto; /* Центрируем элементы карусели */
+  padding: 10px; /* Уменьшите отступы, если нужно */
+  text-align: center;
+}
+
+.project-item:hover {
+  transform: scale(1.03); /* Увеличиваем карточку при наведении */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* контакты */
+
+.contacts {
+  padding: 2rem;
+  background-color: #f9f9f9; /* Фоновый цвет */
+  border-radius: 8px; /* Закругленные углы */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+  margin-top: 5%;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку при нехватке места */
+  justify-content: center; /* Центрируем карточки по горизонтали */
+  gap: 20px; /* Пробел между карточками */
+  margin-bottom: 1.5rem; /* Отступ снизу */
+}
+
+.contact-card {
+  background: white; /* Белый фон для карточек */
+  border-radius: 8px; /* Закругленные углы */
+  padding: 20px;
+  text-align: center;
+  width: 200px; /* Ширина карточек */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+  transition: transform 0.3s;}
+  
+
+.contact-card:hover {
+  transform: scale(1.05);
+}
+
+.social-links a {
+  margin-right: 1rem;
+  color: white; /* Цвет иконок */
+  transition: color 0.3s;
+ 
+}
+
+
+
+h2 i {
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+  color: #007BFF; /* Цвет иконки */
+  font-size: 1.5rem; /* Размер иконки */
+}
+h3 i {
+  margin-right: 0.5rem; /* Отступ между иконкой и текстом */
+  font-size: 1.2rem; /* Размер иконок */
+ 
+}
